@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/widgets/new.dart';
 import 'package:movies_app/widgets/upcoming.dart';
+
+import '../widgets/buttom_navbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -80,11 +83,14 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 30),
-              const UpComing()
+              const UpComing(),
+              const SizedBox(height: 40),
+              const New(),
             ],
           ),
         ),
       ),
+      bottomNavigationBar: const ButtomNaviigation(),
     );
   }
 }
