@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/widgets/details.dart';
 
 class New extends StatelessWidget {
   const New({super.key});
@@ -37,7 +38,11 @@ class New extends StatelessWidget {
             children: [
               for (int i = 4; i < 8; i++)
                 InkWell(
-                  onTap: () {},
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MoviesDetailScreen(),
+                      )),
                   child: Container(
                     width: 190,
                     height: 310,

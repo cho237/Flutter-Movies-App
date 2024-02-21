@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/screens/category.dart';
+import 'package:movies_app/screens/home.dart';
 
-class ButtomNaviigation extends StatelessWidget {
-  const ButtomNaviigation({super.key});
+class CustomBottomNav extends StatelessWidget {
+  const CustomBottomNav({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,11 @@ class ButtomNaviigation extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const HomeScreen(),
+                ));
+              },
               child: const Icon(
                 Icons.home,
                 size: 35,
@@ -27,7 +33,11 @@ class ButtomNaviigation extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const CategoryScreen(),
+                ));
+              },
               child: const Icon(
                 Icons.category,
                 size: 35,

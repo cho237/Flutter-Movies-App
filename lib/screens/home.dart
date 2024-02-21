@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/widgets/buttom_navbar.dart';
 import 'package:movies_app/widgets/new.dart';
 import 'package:movies_app/widgets/upcoming.dart';
 
-import '../widgets/buttom_navbar.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -90,7 +91,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const ButtomNaviigation(),
+      bottomNavigationBar: const CustomBottomNav(),
     );
   }
 }
